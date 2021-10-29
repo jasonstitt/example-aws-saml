@@ -1,0 +1,16 @@
+{
+  "name": "example-aws-saml",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "node idp/server",
+    "generate": "node idp/generate"
+  },
+  "author": "Jason Stitt",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-forge": "^0.10.0",
+    "samlp": "^6.0.2"
+  }
+}

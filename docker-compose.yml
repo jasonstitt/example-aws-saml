@@ -1,0 +1,15 @@
+# This is an example of injecting your AWS profile into a Docker container
+
+version: "3.9"
+services:
+  awscli:
+    image: amazon/aws-cli
+    environment:
+      AWS_PROFILE: sso-test-readonly
+      AWS_REGION: us-east-1
+    volumes:
+      # Variable expansion is relative to the host, not the container, so you need to know the absolute homedir path for your specific image and user
+      - ${HOME}/.aws/credentials:/root/.aws/credentials
+    command:
+      - sts
+      - get-caller-identity

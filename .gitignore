@@ -1,0 +1,6 @@
+.DS_Store
+node_modules
+.terraform
+metadata.xml
+*.tfstate*
+*.pem
